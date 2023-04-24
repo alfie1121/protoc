@@ -14,9 +14,9 @@ docker build --rm -t protoexec .
 ```
 	docker run --rm -v $(shell pwd):/mnt protoexec  \
 	--go_out=plugins=grpc:./ \
-	--govalidators_out=./ \
+	--govalidators_out=./ \ <- 如有使用 validators 需加上
 	--proto_path=./ \
-	--proto_path=./vendor \
+	--proto_path=./vendor \ <- 如有使用 validators 需加上
 	./proto/*.proto
 ```
 
